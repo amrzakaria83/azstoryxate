@@ -1152,7 +1152,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.tiktok.com/@sameh_mokhtar" target="_blank" class="video-card">
+                <a href="https://www.youtube.com/embed/RawrGUNx3nc?si=JjCkBv0liTk7DQ7B" target="_blank" class="video-card">
                     <div class="video-thumbnail">
                         <img src="{{asset('assets/media/img/IMG-20241214-WA0004.jpg')}}">
                     </div>
@@ -1161,8 +1161,8 @@
                         <p class="video-description">مهارات التواصل الفعال وكيفية بناء علاقات صحية ومتوازنة مع الآخرين</p>
                         <div class="video-meta">
                             <div class="video-platform">
-                                <span>📱</span>
-                                <span>TikTok</span>
+                                <span>📺</span>
+                                <span>YouTube</span>
                             </div>
                             <span class="video-duration">4:15</span>
                         </div>
