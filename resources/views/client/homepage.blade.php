@@ -1135,7 +1135,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.youtube.com/@sameh_mokhtar" target="_blank" class="video-card">
+                <a href="https://www.youtube.com/watch?v=mIhSbEPa5-c" target="_blank" class="video-card">
                     <div class="video-thumbnail">
                         <img src="{{asset('assets/media/img/IMG-20241214-WA0007.jpg')}}">
                     </div>
