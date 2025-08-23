@@ -1778,7 +1778,7 @@ function closeModal() {
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 سامح مختار - جميع الحقوق محفوظة | استشارات نفسية ودعم إرشادي</p>
+            <p>&copy; 2025 سامح مختار - جميع الحقوق محفوظة | استشارات نفسية ودعم إرشادي</p> <a href="https://www.az3331515.com" target="_blank" class="text-gray-800 text-hover-primary">@AZ</a>
         </div>
     </footer>
 
