@@ -1135,7 +1135,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.youtube.com/embed/mIhSbEPa5-c?si=RHRcEDzTY5ttxGqq" target="_blank" class="video-card">
+                <a href="https://www.youtube.com/embed/mIhSbEPa5-c?si=RHRcEDzTY5ttxGqq" autoplay target="_blank" class="video-card">
                     <div class="video-thumbnail">
                         <img src="{{asset('assets/media/img/IMG-20241214-WA0007.jpg')}}">
                     </div>
