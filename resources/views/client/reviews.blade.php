@@ -1335,8 +1335,8 @@
             @endforeach
           @endif
     
-        <div class="text-center mt-4">
-          <a href="{{ route('reviewall') }}" class="btn btn-success px-4 py-2">
+        <div class="mt-4">
+          <a href="{{ route('reviewall') }}" id="viewAllReviews" class="btn btn-success px-4 py-2">
               <i class="fas fa-star me-2"></i>عرض جميع التقييمات
           </a>
       </div>
@@ -1406,5 +1406,16 @@
         // }
 
       </script>
+  <script>
+    $(document).ready(function() {
+      const viewAllReviews = document.getElementById('viewAllReviews');
+      viewAllReviews.addEventListener('click', function(e) {
+         e.preventDefault();
+         
+          window.location.href='{{ route('reviewall') }}'
+        // هنا يمكنك إضافة أي تأثيرات أو تغييرات عند النقر على زر "عرض جميع التقييمات"
+      });
+    });
+  </script>
 </body>
 </html>

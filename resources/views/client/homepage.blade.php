@@ -1093,7 +1093,7 @@
                         <p class="video-description">النسيان  </p>
                         <div class="video-meta">
                             <div class="video-platform">
-                                <span>📱</span>
+                                <!-- <span>📱</span> -->
                                 <span>TikTok</span>
                             </div>
                             <span class="video-duration">2:51</span>
@@ -1110,7 +1110,7 @@
                         <p class="video-description">الحب</p>
                         <div class="video-meta">
                             <div class="video-platform">
-                                <span>📱</span>
+                                <!-- <span>📱</span> -->
                                 <span>TikTok</span>
                             </div>
                             <span class="video-duration">2:45</span>
@@ -1700,22 +1700,60 @@ function closeModal() {
   </style>
 
   <h2>التقييمات</h2>
-
+    @php
+        use App\Models\Review;
+        $reviews = Review::where('status', 0)->orderBy('created_at', 'desc')->get();
+        $totalReviews = $reviews->count();
+        $averageRating = $totalReviews > 0 ? round($reviews->avg('rating'), 1) : 0;
+        $fiveStarCount = $reviews->where('rating', 5)->count();
+    @endphp
   <!-- إحصائيات التقييمات -->
   <div class="stats-overview">
     <div class="stat-card">
-      <div class="stat-number" id="totalReviews">0</div>
+      <div class="stat-number" id="totalReviews">{{ $totalReviews }}</div>
       <div class="stat-label">إجمالي التقييمات</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" id="averageRating">0.0</div>
+      <div class="stat-number" id="averageRating">{{ $averageRating }}</div>
       <div class="stat-label">متوسط التقييم</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number" id="fiveStarCount">0</div>
+      <div class="stat-number" id="fiveStarCount">{{ $fiveStarCount }}</div>
       <div class="stat-label">5 نجوم</div>
     </div>
   </div>
+  
+  <h1>احدث التقييمات</h1>
+  @foreach($reviews->slice(0, 7) as $index => $review)
+  <div class="review-item" style="animation-delay: ${index * 0.1}s">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">
+                {{ substr($review->reviewer, 0, 2) }}
+              </div>
+              <div class="reviewer-details">
+                <h4>{{ $review->reviewer }}</h4>
+                <div class="review-date">{{ $review->created_at->format('Y-m-d') }}</div>
+              </div>
+            </div>
+            <div class="rating-display">
+                @for($i = 1; $i <= 5; $i++)
+                    <span class="star {{ $i <= $review->rating ? 'filled' : '' }}">
+                        @if($i <= $review->rating)
+                            ⭐
+                        @else
+                            ☆
+                        @endif
+                    </span>
+                @endfor
+            </div>
+          </div>
+          <div class="review-text">
+            {{ $review->comment }}
+          </div>
+        </div>
+        @endforeach
+      
 
 </section>
 
