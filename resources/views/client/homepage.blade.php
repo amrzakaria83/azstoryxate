@@ -1135,7 +1135,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.youtube.com/embed/mIhSbEPa5-c?si=RHRcEDzTY5ttxGqq" autoplay target="_blank" class="video-card">
+                <a href="https://www.youtube.com/embed/mIhSbEPa5-c?si=RHRcEDzTY5ttxGqq&autoplay=1"  target="_blank" class="video-card">
                     <div class="video-thumbnail">
                         <img src="{{asset('assets/media/img/IMG-20241214-WA0007.jpg')}}">
                     </div>
@@ -1152,7 +1152,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.youtube.com/embed/RawrGUNx3nc?si=JjCkBv0liTk7DQ7B" target="_blank" class="video-card">
+                <a href="https://www.youtube.com/embed/RawrGUNx3nc?si=JjCkBv0liTk7DQ7B&autoplay=1" target="_blank" class="video-card">
                     <div class="video-thumbnail">
                         <img src="{{asset('assets/media/img/IMG-20241214-WA0004.jpg')}}">
                     </div>

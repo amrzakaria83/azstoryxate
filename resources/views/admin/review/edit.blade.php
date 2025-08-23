@@ -19,7 +19,7 @@
         <span class="h-20px border-gray-300 border-start mx-4"></span>
         <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
             <li class="breadcrumb-item text-muted px-2">
-                <a  href="{{route('admin.contact_requests.index')}}" class="text-muted text-hover-primary">الموظفين</a>
+                <a  href="{{route('admin.reviews.index')}}" class="text-muted text-hover-primary">الموظفين</a>
             </li>
             <li class="breadcrumb-item">
                 <span class="bullet bg-gray-300 w-5px h-2px"></span>
@@ -40,7 +40,7 @@
             <!--begin::Content-->
             <div id="kt_account_settings_profile_details" class="collapse show">
                 <!--begin::Form-->
-                <form action="{{route('admin.contact_requests.update')}}" method="POST" enctype="multipart/form-data" id="kt_account_profile_details_form" class="form">
+                <form action="{{route('admin.reviews.update')}}" method="POST" enctype="multipart/form-data" id="kt_account_profile_details_form" class="form">
                     @csrf
                     <input type="hidden" name="id" value="{{$data->id}}" />
                     <!--begin::Card body-->
@@ -51,16 +51,24 @@
                                 <span class="required">الاسم</span>
                             </label>
                             <div class="col-lg-8 fv-row">
-                                <input type="text" name="name_en" placeholder="الاسم" value="{{$data->name_en}}" class="form-control form-control-lg form-control-solid" />
+                                <input type="text" name="reviewer" placeholder="الاسم" value="{{$data->reviewer}}" class="form-control form-control-lg form-control-solid" />
                             </div>
                         </div>
 
                         <div class="row mb-6">
                             <label class="col-lg-2 col-form-label fw-semibold fs-6">
-                                <span class="required">ايميل</span>
+                                <span class="required">التقييم</span>
                             </label>
                             <div class="col-lg-8 fv-row">
-                                <input type="text" name="email" placeholder="ايميل" value="{{$data->email}}" class="form-control form-control-lg form-control-solid" />
+                                <input type="text" name="rating" placeholder="التقييم" value="{{$data->rating}}" class="form-control form-control-lg form-control-solid" />
+                            </div>
+                        </div>
+                        <div class="row mb-6">
+                            <label class="col-lg-2 col-form-label fw-semibold fs-6">
+                                <span class="required">التعليق</span>
+                            </label>
+                            <div class="col-lg-8 fv-row">
+                                <input type="text" name="comment" placeholder="التعليق" value="{{$data->comment}}" class="form-control form-control-lg form-control-solid" />
                             </div>
                         </div>
 

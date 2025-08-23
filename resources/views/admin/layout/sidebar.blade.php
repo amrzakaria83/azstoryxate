@@ -40,6 +40,22 @@
                     <span class="menu-title">الاعدادات العامة</span>
                 </a>
             </div>
+            <div class="menu-item">
+                <a class="menu-link" href="{{route('admin.video_views.index')}}">
+                    <span class="menu-icon">
+                        <i class="fonticon-setting fs-2"></i>
+                    </span>
+                    <span class="menu-title">Video Views</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="menu-link" href="{{route('admin.reviews.index')}}">
+                    <span class="menu-icon">
+                        <i class="fonticon-setting fs-2"></i>
+                    </span>
+                    <span class="menu-title">Reviews</span>
+                </a>
+            </div>
 
         </div>
 

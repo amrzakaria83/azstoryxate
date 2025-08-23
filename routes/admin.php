@@ -34,6 +34,24 @@ Route::name('admin.')->middleware(['auth:admin'])->group(function () {
             Route::get('/edit/{id}', 'EmployeesController@edit')->name('edit');
             Route::post('/update', 'EmployeesController@update')->name('update');
         });
+        Route::name('video_views.')->prefix('video_views')->group(function(){
+            Route::get('/','Video_viewsController@index')->name('index');
+            Route::get('/show/{id}','Video_viewsController@show')->name('show');
+            Route::post('/delete', 'Video_viewsController@destroy')->name('delete');
+            Route::get('/create','Video_viewsController@create')->name('create');
+            Route::post('/store','Video_viewsController@store')->name('store');
+            Route::get('/edit/{id}', 'Video_viewsController@edit')->name('edit');
+            Route::post('/update', 'Video_viewsController@update')->name('update');
+        });
+        Route::name('reviews.')->prefix('reviews')->group(function(){
+            Route::get('/','ReviewsController@index')->name('index');
+            Route::get('/show/{id}','ReviewsController@show')->name('show');
+            Route::post('/delete', 'ReviewsController@destroy')->name('delete');
+            Route::get('/create','ReviewsController@create')->name('create');
+            Route::post('/store','ReviewsController@store')->name('store');
+            Route::get('/edit/{id}', 'ReviewsController@edit')->name('edit');
+            Route::post('/update', 'ReviewsController@update')->name('update');
+        });
 
         Route::name('users.')->prefix('users')->group(function(){
             Route::get('/','UsersController@index')->name('index');
