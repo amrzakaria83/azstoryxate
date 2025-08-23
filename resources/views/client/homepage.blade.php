@@ -1043,7 +1043,7 @@
                     <li><a href="#videos">الفيديوهات</a></li>
                     <li><a href="#articles">المقالات</a></li>
                     <li><a href="#booking">حجز جلسة</a></li>
-                    <li><a href="#reviews">اضافه تقييم</a></li>
+                    <li><a href="{{route('reviews')}}">اضافه تقييم</a></li>
 
                     <li><a href="#contact">تواصل معنا</a></li>
                 </ul>

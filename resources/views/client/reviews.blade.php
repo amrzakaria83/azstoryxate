@@ -1149,6 +1149,7 @@
             border: 1px solid #e3e8ff;
             position: relative;
             z-index: 2;
+            display: block !important; /* التأكد من ظهور النموذج */
           }
 
           #reviewForm h3 {
